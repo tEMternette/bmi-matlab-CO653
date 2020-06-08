@@ -15,17 +15,14 @@ DefuzzMethod='centroid'
 Name='weight'
 Range=[0 1]
 NumMFs=3
-MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
-MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
-MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+MF1='mf1':'gaussmf',[0.2123 0]
+MF2='mf2':'gaussmf',[0.2123 0.5]
+MF3='mf3':'gaussmf',[0.2123 1]
 
 [Input2]
 Name='height'
 Range=[0 1]
-NumMFs=3
-MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
-MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
-MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+NumMFs=0
 
 [Output1]
 Name='BMI'
