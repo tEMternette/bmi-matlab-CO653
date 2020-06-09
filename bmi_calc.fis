@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=2
 NumOutputs=1
-NumRules=0
+NumRules=5
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -16,7 +16,7 @@ Name='weight'
 Range=[10 100]
 NumMFs=3
 MF1='Light':'trimf',[-34.99 10 54.99]
-MF2='Average':'trimf',[10.01 55 99.99]
+MF2='Average':'trimf',[20 55 90]
 MF3='Heavy':'trimf',[55.01 100 145]
 
 [Input2]
@@ -29,12 +29,17 @@ MF3='Tall':'trimf',[125 200 275]
 
 [Output1]
 Name='BMI'
-Range=[0 10]
+Range=[0 40]
 NumMFs=5
-MF1='Anorexic':'trimf',[0 1 2]
-MF2='Underweight':'trimf',[2 3 4]
-MF3='Healthy':'trimf',[4 5 6]
-MF4='Overweight':'trimf',[6 7 8]
-MF5='Obese':'trimf',[8 9 10]
+MF1='Anorexic':'trimf',[0 4 8]
+MF2='Underweight':'trimf',[8 12 16]
+MF3='Healthy':'trimf',[16 20 24]
+MF4='Overweight':'trimf',[24 28 32]
+MF5='Obese':'trimf',[32 36 40]
 
 [Rules]
+3 1, 5 (1) : 1
+2 2, 3 (1) : 1
+1 3, 1 (1) : 1
+1 3, 2 (1) : 2
+3 1, 4 (1) : 2
