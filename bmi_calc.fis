@@ -13,23 +13,28 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='weight'
-Range=[0 1]
+Range=[10 100]
 NumMFs=3
-MF1='mf1':'gaussmf',[0.2123 0]
-MF2='mf2':'gaussmf',[0.2123 0.5]
-MF3='mf3':'gaussmf',[0.2123 1]
+MF1='Light':'trimf',[-34.99 10 54.99]
+MF2='Average':'trimf',[10.01 55 99.99]
+MF3='Heavy':'trimf',[55.01 100 145]
 
 [Input2]
 Name='height'
-Range=[0 1]
-NumMFs=0
+Range=[50 200]
+NumMFs=3
+MF1='Short':'trimf',[-25 50 125]
+MF2='Average':'trimf',[50 125 200]
+MF3='Tall':'trimf',[125 200 275]
 
 [Output1]
 Name='BMI'
-Range=[0 1]
-NumMFs=3
-MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
-MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
-MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+Range=[0 10]
+NumMFs=5
+MF1='Anorexic':'trimf',[0 1 2]
+MF2='Underweight':'trimf',[2 3 4]
+MF3='Healthy':'trimf',[4 5 6]
+MF4='Overweight':'trimf',[6 7 8]
+MF5='Obese':'trimf',[8 9 10]
 
 [Rules]
