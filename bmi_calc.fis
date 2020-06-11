@@ -21,21 +21,21 @@ MF3='Heavy':'trimf',[55.01 100 145]
 
 [Input2]
 Name='height'
-Range=[50 200]
+Range=[50 300]
 NumMFs=3
-MF1='Short':'trimf',[-25 50 125]
-MF2='Average':'trimf',[50 125 200]
-MF3='Tall':'trimf',[125 200 275]
+MF1='Short':'trimf',[0 50 153]
+MF2='Average':'trapmf',[147 162 175 190]
+MF3='Tall':'trimf',[180 300 300]
 
 [Output1]
 Name='BMI'
 Range=[0 40]
 NumMFs=5
-MF1='Anorexic':'trimf',[0 4 8]
-MF2='Underweight':'trimf',[8 12 16]
-MF3='Healthy':'trimf',[16 20 24]
-MF4='Overweight':'trimf',[24 28 32]
-MF5='Obese':'trimf',[32 36 40]
+MF1='Anorexic':'trimf',[0 4 15]
+MF2='Underweight':'trimf',[5 12 20]
+MF3='Healthy':'trimf',[18 22 27]
+MF4='Overweight':'trimf',[23 27 32]
+MF5='Obese':'trimf',[28 34 40]
 
 [Rules]
 3 1, 5 (1) : 1
